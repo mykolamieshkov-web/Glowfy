@@ -1,0 +1,30 @@
+// here only variables for body 
+body, html {
+ scroll-behavior: smooth;
+ overflow-x: hidden;
+width: 100%;
+height:100%;
+background-color: var(--black-background);
+font-family: "Poppins", sans-serif;
+
+}
+a, p {
+    @include fluid-text;
+    color: var(--paragraph-color);
+ }
+ 
+ h1,h2, h3 {
+     @include fluid-title;
+     color: var(--header-color); 
+
+ }
+ // hide text for screen-readers:
+ 
+ .visually-hidden {
+  @include visually-hidden; 
+   }
+   .button {
+    @include button;
+   }
+
+   

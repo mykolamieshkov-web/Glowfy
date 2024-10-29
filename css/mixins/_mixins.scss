@@ -1,0 +1,54 @@
+// пример миксина под резиновый текст:
+@mixin fluid-text {
+   font-size: clamp(18px, 1.19vw, 18px);
+   line-height: calc(27 / 18 * 100%);
+   letter-spacing: 0;
+   font-weight: lighter;
+   // line height into a % calc (line-height / font-size * 100%)
+}
+
+ 
+
+ 
+ @mixin fluid-title {
+   font-size: clamp(51px, 3.37vw, 32px); /* Заголовки */
+    line-height: calc(51 / 61.4 * 100%);
+    letter-spacing: 0px;
+    font-weight: medium;
+    font-style: oblique;
+ }
+
+
+@mixin visually-hidden {
+ position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+@mixin button {
+  min-width: 162px;
+  max-width: 284px;
+  min-height: 55px;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 12px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: calc(22 / 14 * 100%);
+  letter-spacing: 2px;
+  font-weight: medium;
+  transition: all 235ms ease-in;
+  @include mobile-s {
+    min-height: 42px;
+  }
+  @include hover {
+    background-color: var(--hover-color);
+  }
+}

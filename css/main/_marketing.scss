@@ -1,0 +1,33 @@
+.marketing {
+    margin: 120px 0 100px 0;
+    width: 100%;
+    height: min-content;
+    // .marketing__content
+
+    &__content {
+        padding: 30rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        flex-flow:  row wrap;
+        @include tablet {
+            justify-content: center;
+        }
+
+    }
+
+    // .marketing__column
+
+    &__column--picture {
+        margin-top: 100px;
+
+    }
+    &__column--text {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        row-gap: 3.5rem;
+
+    }
+}
